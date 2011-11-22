@@ -1,0 +1,7 @@
+name: Nivo Slider
+description: Allows you to insert 'Nivo slider' (http://nivo.dev7studios.com/) blocks
+category: Widgets
+version: 1.0a
+core: 1.x
+dependencies:
+    MediaManager (1.x)
