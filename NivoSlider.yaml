@@ -4,4 +4,4 @@ category: Media
 version: 1.0a
 core: 1.x
 dependencies:
-    MediaManager (1.x)
+    - Mediamanager (1.x)
