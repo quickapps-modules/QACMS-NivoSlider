@@ -1,0 +1,1 @@
+Note: Images used in the slider for the WebDesign&Such Theme should have the dimensions 564px x 239px

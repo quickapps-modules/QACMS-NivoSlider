@@ -1,0 +1,145 @@
+/*
+Skin Name: WebDesign&Such Theme
+Skin URI: http://webdesignandsuch.com
+Slider URI: http://nivo.dev7studios.com
+Skin Type: fixed
+Description: A happy lil theme for the Nivo Slider.
+Version: 1.0
+Author: Mike Ilsley
+Author URI: http://beantowndesign.com
+*/
+
+.theme-wds.slider-wrapper {
+    background:url(slider.png) no-repeat 0 0;
+    width:600px;
+    height:284px;
+    margin:0 auto;
+    padding-top:18px;
+    position:relative;
+}
+
+.theme-wds .nivoSlider {
+    position:relative;
+    width:600px;
+    height:239px;
+    margin-left:18px;
+    background:url(loading.gif) no-repeat 50% 50%;
+}
+.theme-wds .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:564px; /* Make sure your images are the same size */
+    height:239px; /* Make sure your images are the same size */
+}
+.theme-wds .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-wds .nivo-controlNav {
+    position:absolute;
+	background:url(line.png) repeat-x 0 6px;
+	left:50%;
+	bottom:-55px;
+    margin-left:-65px; /* Tweak this to center bullets */
+}
+
+/* bullets */
+
+.theme-wds .nivo-controlNav a {
+    display:block;
+    width:13px;
+    height:14px;
+    background:url(bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:15px;
+    float:left;
+}
+
+.theme-wds .nivo-controlNav a:last-child, a.last-child {margin-right:0px}
+
+.theme-wds .nivo-controlNav a.active {
+    background-position:0 -15px;
+}
+
+
+/* arrow buttons */
+
+.theme-wds .nivo-directionNav a {
+	display:block;
+	width:53px;
+	height:53px;
+	background:url(arrows.png) no-repeat 0 0;
+	text-indent:-9999px;
+	border:0;
+    top:93px;
+}
+.theme-wds a.nivo-nextNav {
+	background-position: -53px 0;
+	right:-45px;
+	padding-left:0px
+    
+}
+.theme-wds a.nivo-prevNav {
+	background-position:0 0px;
+	left:-80px;
+	
+    
+}
+
+.theme-wds a.nivo-prevNav:hover {
+	background-position:0 -53px;
+	
+    
+}
+
+.theme-wds a.nivo-nextNav:hover {
+	background-position:-53px -53px;
+	
+    
+}
+
+
+/* caption */
+
+.theme-wds .nivo-caption {
+     bottom:70%;
+    right:auto;
+    left:0px;
+    width:auto;
+    max-width:630px;
+    overflow:hidden;
+    background:#000;
+    text-shadow:none;
+    font-family: arial, serif;
+    color:#fff;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px; 
+}
+.theme-wds .nivo-caption a { 
+    color:#fff;
+    font-weight:bold;
+    font-size:23px;
+    
+}
+.theme-wds .nivo-caption a:hover { 
+    color:#fff;
+}
+
+.theme-wds .nivo-caption p {
+    padding:5px 15px;
+    color:#e5e5e5;
+	text-shadow: 0px 0px 2px #000;
+    font-weight:normal;
+    font-size:23px;
+    
+}
+
+

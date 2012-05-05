@@ -1,0 +1,11 @@
+/*
+This is simply to remove the background line image under the bullets in IE.
+Reason? IE doesn't support last-child, so removing the margin on the last bullet doesn't work in IE.
+Damn you Microsoft.
+*/
+
+
+
+.theme-wds .nivo-controlNav {
+	background:none
+}
