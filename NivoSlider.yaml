@@ -1,7 +1,5 @@
 name: Nivo Slider
-description: Allows you to insert 'Nivo slider' (http://nivo.dev7studios.com/) blocks
+description: Allows you to insert 'Nivo slider' (http://nivo.dev7studios.com/) blocks using hooktags
 category: Media
-version: 1.0a
-core: 1.x
-dependencies:
-    - Mediamanager (1.x)
+version: 1.0
+core: >1.0
