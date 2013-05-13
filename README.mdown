@@ -1,0 +1,27 @@
+#Nivo Slider
+
+[![QuickApps CMS](https://raw.github.com/QuickAppsCMS/QuickApps-CMS-Docs/1.x/img/logo.png)](http://www.quickappscms.org)
+
+Nivo Slider module allows you to easily insert Image Sliders, powered by [Nivo Slider](http://dev7studios.com/).
+
+#Usage
+
+Basic usage:
+
+    [nivo]
+        [image]http://www.example.com/image_1.jpg[/image]
+        [image caption="Image Description"]http://www.example.com/image_2.jpg[/image]
+        [image link="http://www.example.com/"]http://www.example.com/image_3.jpg[/image]
+    [/nivo]
+	
+
+Configuring your slider canvas:
+
+    [nivo id="my-nivo-slider" theme="default" width="100%" height="30px"]
+        ...
+    [/nivo]
+
+-	id: Unique ID for your slider. A random one will be generated if not given
+-	theme: Nivo Slider's theme to use. Included in the package: bar, dark, default, light. "default" if not given.
+-	width: Width of Nivo's canvas, valid units: %, in, cm, mm, em, ex, pt, pc, px. Default to "px"
+-	height: Same as width.
