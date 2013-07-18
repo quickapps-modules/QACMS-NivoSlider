@@ -5,28 +5,7 @@ class NivoSliderHooktagsHelper extends AppHelper {
 
 	public function nivo($attr, $content = null, $code = '') {
 		$out = '';
-		$defaults = array(
-			'theme' => 'default',
-			'width' => '',
-			'height' => '',
-			'effect' => 'random',
-			'slices' => 15,
-			'boxCols' => 8,
-			'boxRows' => 4,
-			'animSpeed' => 500,
-			'pauseTime' => 3000,
-			'startSlide' => 0,
-			'directionNav' => true,
-			'controlNav' => true,
-			'controlNavThumbs' => false,
-			'pauseOnHover' => true,
-			'manualAdvance' => false,
-			'prevText' => 'Prev',
-			'nextText' => 'Next',
-			'randomStart' => false
-		);
-		$attr = array_merge($defaults, (array)$attr);
-
+		$attr = $this->attrs($attr);
 		$options['id'] = uniqid();
 		$options['theme'] = $attr['theme'];
 		$options['width'] = $attr['width'];
@@ -49,6 +28,64 @@ class NivoSliderHooktagsHelper extends AppHelper {
 		$this->__captions = '';
 
 		return $out;
+	}
+	
+	private function attrs($attr) {
+		$defaults = array(
+			'theme' => 'default',
+			'width' => '',
+			'height' => '',
+			'effect' => 'random',
+			'slices' => 15,
+			'boxCols' => 8,
+			'boxRows' => 4,
+			'animSpeed' => 500,
+			'pauseTime' => 3000,
+			'startSlide' => 0,
+			'directionNav' => true,
+			'controlNav' => true,
+			'controlNavThumbs' => false,
+			'pauseOnHover' => true,
+			'manualAdvance' => false,
+			'prevText' => 'Prev',
+			'nextText' => 'Next',
+			'randomStart' => false
+		);
+
+		foreach ($defaults as $key => $value) {
+			$low = strtolower($key);
+
+			if ($low !== $key && isset($attr[$low])) {
+				$attr[$key] = $attr[$low];
+				unset($attr[$low]);
+			}
+		}
+
+		if (isset($attr['directionNav'])) {
+			$attr['directionNav'] = filter_var($attr['directionNav'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		if (isset($attr['controlNav'])) {
+			$attr['controlNav'] = filter_var($attr['controlNav'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		if (isset($attr['controlNavThumbs'])) {
+			$attr['controlNavThumbs'] = filter_var($attr['controlNavThumbs'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		if (isset($attr['pauseOnHover'])) {
+			$attr['pauseOnHover'] = filter_var($attr['pauseOnHover'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		if (isset($attr['manualAdvance'])) {
+			$attr['manualAdvance'] = filter_var($attr['manualAdvance'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		if (isset($attr['randomStart'])) {
+			$attr['randomStart'] = filter_var($attr['randomStart'], FILTER_VALIDATE_BOOLEAN);
+		}
+
+		return array_merge($defaults, (array)$attr);
 	}
 
 	// [image]http://www.example.com/image.jpg[/image]
