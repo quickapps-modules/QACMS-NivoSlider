@@ -25,3 +25,51 @@ Configuring your slider canvas:
 -	theme: Nivo Slider's theme to use. Included in the package: bar, dark, default, light. "default" if not given.
 -	width: Width of Nivo's canvas, valid units: %, in, cm, mm, em, ex, pt, pc, px. Default to "px"
 -	height: Same as width.
+
+
+Other available options:
+
+-	effect: Specify sets like: 'fold,fade,sliceDown'. Default 'random'
+-	slices: For slice animations. Default 15
+-	boxCols: For box animations. Default 8
+-	boxRows: For box animations. Default 4
+-	animSpeed: Slide transition speed. Default 500 (1/2 sec)
+-	pauseTime: How long each slide will show. Default 3000 (3 secs)
+-	startSlide: Set starting Slide (0 index). Default 0
+-	directionNav: Next & Prev navigation. Default true
+-	controlNav: 1,2,3... navigation. Default true
+-	controlNavThumbs: Use thumbnails for Control Nav. Default false
+-	pauseOnHover: Stop animation while hovering. Default true
+-	manualAdvance: Force manual transitions. Default false
+-	prevText: Prev directionNav text. Default 'Prev'
+-	nextText: Next directionNav text. Dfault 'Next'
+-	randomStart: Start on a random slide. Default false
+
+
+The effect parameter can be any of the following:
+
+-	sliceDown
+-	sliceDownLeft
+-	sliceUp
+-	sliceUpLeft
+-	sliceUpDown
+-	sliceUpDownLeft
+-	fold
+-	fade
+-	random
+-	slideInRight
+-	slideInLeft
+-	boxRandom
+-	boxRain
+-	boxRainReverse
+-	boxRainGrow
+-	boxRainGrowReverse
+
+
+Advanced usage:
+
+    [nivo effect=slideInLeft controlNav=false pauseTime=6000]
+        [image]http://www.example.com/image_1.jpg[/image]
+        [image caption="Image Description"]http://www.example.com/image_2.jpg[/image]
+        [image link="http://www.example.com/"]http://www.example.com/image_3.jpg[/image]
+    [/nivo]
