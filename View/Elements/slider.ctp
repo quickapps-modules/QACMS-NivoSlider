@@ -16,13 +16,18 @@
 	}
 ?>
 <div class="slider-wrapper theme-<?php echo $theme; ?>" style="<?php echo $dim; ?>">
-	<div id="nivo-slider-<?php echo $id; ?>">
+	<div id="nivo-slider-<?php echo $id; ?>" style="display:none;">
 		<?php echo $images; ?>
 	</div>
+	
+	<?php if (!empty($captions)): ?>
+		<?php echo $captions; ?>
+	<?php endif; ?>	
 </div>
 
 <script type="text/javascript">
-    $(window).load(function() {
+    $(document).ready(function() {
+		$("#nivo-slider-<?php echo $id; ?>").show();
         $("#nivo-slider-<?php echo $id; ?>").nivoSlider({
 
 			<?php

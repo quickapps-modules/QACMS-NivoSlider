@@ -97,6 +97,7 @@ class NivoSliderHooktagsHelper extends AppHelper {
 			'caption' => ''
 		);
 		$attr = array_merge($defaults, (array)$attr);
+		$image_options = array();
 
 		if (!empty($attr['link'])) {
 			$image_options['url'] = $attr['link'];
@@ -104,14 +105,15 @@ class NivoSliderHooktagsHelper extends AppHelper {
 
 		if (!empty($attr['caption'])) {
 			$the_caption = $attr['caption'];
-			$attr['caption'] = uniqid();
+			$caption_id = 'caption-' . uniqid();
+			$image_options['alt'] = strip_tags($the_caption);
+			$image_options['title'] = "#{$caption_id}";
 		}
 
-		$image_options['title'] = $attr['caption'];
 		$out .= $this->Html->image(trim($content), $image_options);
 
 		if (isset($the_caption)) {
-			$caption .= '<div id="' . $attr['caption'] . '">' . $the_caption . '</div>';
+			$caption .= '<div id="' . $caption_id . '" style="display:none;">' . $the_caption . '</div>';
 		}
 
 		$this->__captions .= $caption . "\n";
